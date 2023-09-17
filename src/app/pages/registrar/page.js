@@ -16,7 +16,7 @@ const Form = () => {
   <li><a href="/pages/registrar">Registrar</a></li>
 
 </ul>
-      <h1>Login de Registrar</h1>
+      <h1>Login de Registro </h1>
       <form onSubmit={handlerLogin}>
 
       <input

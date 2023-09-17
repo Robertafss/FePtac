@@ -37,7 +37,7 @@ export default function Login() {
       <form onSubmit={handlerLogin}>
       <div>
       </div>
-      <h1>Entre no nosso site </h1>
+      <h1>Venha fazer parte do nosso site  </h1>
         <input
           placeholder='E-mail'
           type="email"

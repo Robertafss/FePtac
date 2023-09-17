@@ -10,6 +10,12 @@ const Form = () => {
   }
   return (
     <div>
+      <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="/pages/alterar">Alterar</a></li>
+  <li><a href="/pages/registrar">Registrar</a></li>
+
+</ul>
       <h1>Login de Registrar</h1>
       <form onSubmit={handlerLogin}>
 

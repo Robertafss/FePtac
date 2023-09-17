@@ -26,6 +26,13 @@ export default function Login() {
   }
   return (
     <body>
+       <ul>
+ 
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="/pages/alterar">Alterar</a></li>
+  <li><a href="/pages/registrar">Registrar</a></li>
+ 
+</ul>
     <div Nameclass="body">
       <form onSubmit={handlerLogin}>
       <div>

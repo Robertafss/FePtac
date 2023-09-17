@@ -26,7 +26,7 @@ export default function Login() {
   }
   return (
     <body>
-    <div class="body">
+    <div Nameclass="body">
       <form onSubmit={handlerLogin}>
       <div>
       </div>

@@ -1,4 +1,4 @@
-
+import '../app/global.css'
 
 export const metadata = {
   title: 'Register users',

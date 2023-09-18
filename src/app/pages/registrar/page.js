@@ -18,7 +18,7 @@ const Form = () => {
 </ul>
       <h1>Login de Registro </h1>
       <form onSubmit={handlerLogin}>
-
+    
       <input
           placeholder='nome'
           type="nome" >
@@ -34,10 +34,12 @@ const Form = () => {
           type='password'
         >
         </input>
+     
         <button>Entrar</button>
       </form>
       <ToastContainer/>
     </div>
+
   )
 };
 

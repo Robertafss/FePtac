@@ -1,6 +1,6 @@
 import { getUsers } from "@/app/functions/handlerAcessAPI";
 import { Suspense } from "react";
-import List from "@/app/componentes/list";
+import Listadeuser from "@/app/componentes/listadeuser";
 
 export default async function Dashboard() {
 
@@ -10,7 +10,7 @@ export default async function Dashboard() {
            
             <Suspense fallback={<p>  Está pagina esta carregando ...</p>}>
                 <h1> Lista de Usuarios ate o momento </h1>
-                <List users={users}/>
+                <Listadeuser users={users}/>
                 <h1> Aperte em algum botao  para redirecionar</h1>
                 <button><a href="/pages/alterar">Alterar</a></button>
                 <button><a href="/pages/registrar">Registrar</a></button>

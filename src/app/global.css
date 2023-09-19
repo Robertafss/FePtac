@@ -1,12 +1,12 @@
 body {
-    background-color: #cbb5e0;
+    background-color: #8c8dcf;
     font-family: Arial, sans-serif;
-    text-align: center;
+ 
    
   }
   
   h1 {
-    color: #333;
+    color: #433f3f;
     text-align: center;
   }
   
@@ -30,7 +30,7 @@ body {
   }
   
   button:hover {
-    background-color: #4a78ab;
+    background-color: #465c74;
   }
   
   a {
@@ -53,14 +53,14 @@ li {
 
 li a {
   display: block;
-  color: #666;
+  color: #8e76f0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #cfceef;
 }
 
 li a.active {
@@ -69,11 +69,14 @@ li a.active {
 }
 
 input {
-    padding: 10px;
+    padding: 10px 20px ;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    display: block;
+    margin: 20px auto;
+
   }
   
   input:focus {

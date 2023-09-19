@@ -20,8 +20,10 @@ export default function Login() {
         toast.error("Ocorreu um erro no email ou senha!")
       }
       push('/pages/dashboard');
-    } catch {
-      refresh();
+    } 
+    
+    catch {
+      toast.error ("Erro na aplicação")
     }
   }
   return (
@@ -34,6 +36,7 @@ export default function Login() {
  
 </ul>
     <div Nameclass="body">
+ 
       <form onSubmit={handlerLogin}>
       <div>
       </div>
@@ -50,6 +53,7 @@ export default function Login() {
         </input>
         <button>Entrar</button>
       </form>
+  
       <ToastContainer/>
     </div>
     </body>

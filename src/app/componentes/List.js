@@ -1,4 +1,4 @@
-export default async function Listar({users}){
+export default async function List({users}){
     await new Promise((resolve) => setTimeout(resolve,5000));
     return(
         <div>

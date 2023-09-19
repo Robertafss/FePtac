@@ -13,11 +13,14 @@ export const middleware = (request) => {
         if (request.nextUrl.pathname === '/pages/dashboard'|| 
         request.nextUrl.pathname === '/pages/alterar' || request.nextUrl.pathname === '/pages/registrar'
         )  {
+
             return NextResponse.redirect(urlLogin);
+            
         }
     }
     if (isTokenValidated) {
         if (request.nextUrl.pathname === '/') {
+
             return NextResponse.redirect(Users);
         }
     }

@@ -51,6 +51,7 @@ export default function Login() {
           type='password'
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
+        
         <button>Entrar</button>
       </form>
   

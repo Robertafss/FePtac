@@ -18,12 +18,11 @@ return userAuth;
 
 }
 
-const getUsers = () =>{
+const getUsers = async() =>{
 
-    const responseOfApi  = await fetch (url + "/users",
+    const responseOfApi  = await fetch (url + "/users")
     
     const lista = await responseOfApi.json();
-
-    );
+    return lista;
 }
 export { getUsers, getUserAuthenticated };

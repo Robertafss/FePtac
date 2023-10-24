@@ -3,8 +3,9 @@ export default async function Listadeuser({users}){
     return(
         <div>
             {users?.map((user, index)=>
-            <p key={index}>{user.nome}</p> 
+            <p key={index}>{user.name}</p> 
             )}
             </div>
+
     )
 }

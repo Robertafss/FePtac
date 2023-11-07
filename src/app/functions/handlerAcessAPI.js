@@ -42,4 +42,4 @@ const getUsers = async() =>{
     const lista = await responseOfApi.json();
     return lista;
 }
-export { getUsers, getUserAuthenticated };
+export { getUsers, getUserAuthenticated, postUser };

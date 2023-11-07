@@ -4,6 +4,7 @@ import { headers } from "next/dist/client/components/headers";
 
 const url = "https://aula-17-10-sand.vercel.app";
 const getUserAuthenticated = async (user) => {
+    try{
 const responseOfApi = await fetch (url + "/user/authenticated",
 {
     method: "POST", 
@@ -13,9 +14,9 @@ const responseOfApi = await fetch (url + "/user/authenticated",
 );
 const userAuth = await responseOfApi.json();
 return userAuth;
-
-
-
+} catch{
+    return null;
+    }
 }
 ///novo
 const postUser = async (user) =>{

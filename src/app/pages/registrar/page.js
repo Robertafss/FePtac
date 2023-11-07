@@ -1,10 +1,21 @@
 'use client'
+import{postUser} from "@/app/functions/handlerAcessAPI";
+import { useRouter } from "next/navigation";
+import React, {userState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = () => {
+export default function Register(){
+  const [user, setUser] = userState({
+    name: '',
+    email: '',
+    password: '',
+  });
+  const {push} = useRouter();
+}
 
-  const handlerLogin = async (e) => {
+const Form = () => {
+    const handlerLogin = async (e) => {
     e.preventDefault();
     toast.success('registrado com sucesso')
   }
@@ -43,4 +54,4 @@ const Form = () => {
   )
 };
 
-export default Form;
+

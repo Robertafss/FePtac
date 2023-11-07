@@ -17,7 +17,23 @@ return userAuth;
 
 
 }
+///novo
+const postUser = async (user) =>{
+    try{
+        const responseOfApi = await fetch(url + "/user", {
+            method:'post',
+            headers: {'content-type': 'aplication/json'},
 
+        });
+        const useSave = await responseOfApi.json();
+        return useSave;
+
+    }catch{
+        return null;
+    }
+
+}
+//novo
 const getUsers = async() =>{
 
     const responseOfApi  = await fetch (url + "/users")

@@ -12,14 +12,14 @@ export default function Register(){
     password: '',
   });
   const {push} = useRouter();
-}
+
 
 const form = async (e) => {
     e.preventDefault();
     await postUser(user);
     toast.success('registrado com sucesso')
-    push("/pages/dashboard")
-    
+    push('/pages/dashboard')
+}
   
   return (
     <div>
@@ -58,6 +58,7 @@ const form = async (e) => {
 
   )
 }
-;
+
+
 
 

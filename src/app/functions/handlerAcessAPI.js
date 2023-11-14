@@ -23,7 +23,8 @@ const postUser = async (user) =>{
     try{
         const responseOfApi = await fetch(url + "/user", {
             method:'post',
-            headers: {'content-type': 'aplication/json'},
+            headers: {'content-type': 'Application/json'},
+            body: JSON.stringify(user)
 
         });
         const useSave = await responseOfApi.json();
@@ -36,9 +37,9 @@ const postUser = async (user) =>{
 }
 //novo
 const getUsers = async() =>{
-
-    const responseOfApi  = await fetch (url + "/users")
-    
+    const responseOfApi = await fetch (url + "/users",
+    {next: {revalidate: 10 }}
+    );
     const lista = await responseOfApi.json();
     return lista;
 }

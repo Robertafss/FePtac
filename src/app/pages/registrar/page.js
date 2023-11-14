@@ -16,9 +16,17 @@ export default function Register(){
 
 const form = async (e) => {
     e.preventDefault();
-    await postUser(user);
-    toast.success('registrado com sucesso')
-    push('/pages/dashboard')
+    try{
+      await postUser(user);
+    await new Promise((resolve) => {
+      toast.success("Usurio registrado com sucesso")
+      setTimeout(resolve,5000);
+    });
+    return push("/pages/dashboard");
+  } catch{
+    toast.error("Erro ao registar");
+
+  }
 }
   
   return (

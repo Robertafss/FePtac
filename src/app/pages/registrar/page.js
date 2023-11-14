@@ -1,12 +1,12 @@
 'use client'
 import{postUser} from "@/app/functions/handlerAcessAPI";
 import { useRouter } from "next/navigation";
-import React, {userState} from "react";
+import React, {useState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Register(){
-  const [user, setUser] = userState({
+  const [user, setUser] = useState({
     name: '',
     email: '',
     password: '',
@@ -14,11 +14,13 @@ export default function Register(){
   const {push} = useRouter();
 }
 
-const Form = () => {
-    const handlerLogin = async (e) => {
+const form = async (e) => {
     e.preventDefault();
+    await postUser(user);
     toast.success('registrado com sucesso')
-  }
+    push("/pages/dashboard")
+    
+  
   return (
     <div>
       <ul>
@@ -28,21 +30,24 @@ const Form = () => {
 
 </ul>
       <h1>Login de Registro </h1>
-      <form onSubmit={handlerLogin}>
+      <form onSubmit={form}>
     
       <input
           placeholder='nome'
-          type="nome" >
+          type="nome" 
+            onChange={(e) => { setUser({ ...user, name: e.target.value }) }}>
         </input>
         <input
     
           placeholder='E-mail'
-          type="email">
+          type="email"
+          onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
         </input>
 
         <input
           placeholder='Senha'
           type='password'
+          onChange={(e) => { setUser({ ...user, password: e.target.value }) }}
         >
         </input>
      
@@ -52,6 +57,7 @@ const Form = () => {
     </div>
 
   )
-};
+}
+;
 
 

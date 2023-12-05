@@ -1,12 +1,24 @@
 'use client'
+import { updateUser } from '@/app/functions/handlerAcessAPI';
+import { useEffect, useState } from 'react';
+import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = () => {
+export default function alterar ({params}){
 
-  const handlerLogin = async (e) => {
-    e.preventDefault();
-    toast.success('alterado com sucesso')
+const [user,setUser] = useState({
+  name:'',
+  email:'',
+  password:'',
+});
+const {push} = useRouter()
+
+
+  const handlerLogin = async (event) => {
+    event.preventDefault();
+    await updateUser(user, params.id);
+   return push ("/pages/dashboard");
   }
   return (
     <div>
@@ -22,25 +34,29 @@ const Form = () => {
 
       <input
           placeholder='nome'
-          type="nome" >
+          type="nome" 
+             onChange={(e) => { setUser({ ...user, name: e.target.value }) }}>
         </input>
         <input
     
           placeholder='E-mail'
-          type="email">
+          type="email"
+             onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
+            
         </input>
 
         <input
           placeholder='Senha'
           type='password'
+          onChange={(e) => { setUser({ ...user, password: e.target.value }) }}
         >
         </input>
         <button>Entrar</button>
-        <button><a href="/pages/dashboard">Voltar</a></button>
+        <button> <a href="/pages/dashboard">Voltar</a></button>
       </form>
       <ToastContainer/>
     </div>
-  )
-};
+  )};
 
-export default Form;
+
+

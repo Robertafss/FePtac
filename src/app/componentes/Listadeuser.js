@@ -5,7 +5,7 @@ export default async function Listadeuser({users}){
         <div>
             {users?.map((user, index)=>
             <p key={index}>
-                <Link href={`/pages/dashborard/alterar/ ${user.id}`}>  {user.name} </Link>
+                <Link href={`/pages/alterar/${user.id}`}>  {user.name} </Link>
                </p> 
             )}
             </div>

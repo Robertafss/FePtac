@@ -44,6 +44,7 @@ const updateUser = async (user, id) =>{
 
         });
         const userUpdade = await responseOfApi.json();
+        console.log (userUpdade)
         return  userUpdade;
 
     }catch{
